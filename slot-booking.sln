@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotBooking.API", "SlotBooking.API\SlotBooking.API.csproj", "{DF549E52-E26F-4079-82F2-A5735D72C3F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotBooking.API", "SlotBooking.API\SlotBooking.API.csproj", "{DF549E52-E26F-4079-82F2-A5735D72C3F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotBooking.Domain", "SlotBooking.Domain\SlotBooking.Domain.csproj", "{019C9A13-22EA-43C8-A1E4-0063B9361035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotBooking.Application", "SlotBooking.Application\SlotBooking.Application.csproj", "{FAC62EC1-F440-4ABE-9418-9E244187B14E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotBooking.Persistence", "SlotBooking.Persistence\SlotBooking.Persistence.csproj", "{35A30B3E-C95B-46BA-8286-984D83702DBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{DF549E52-E26F-4079-82F2-A5735D72C3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF549E52-E26F-4079-82F2-A5735D72C3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF549E52-E26F-4079-82F2-A5735D72C3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019C9A13-22EA-43C8-A1E4-0063B9361035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019C9A13-22EA-43C8-A1E4-0063B9361035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019C9A13-22EA-43C8-A1E4-0063B9361035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019C9A13-22EA-43C8-A1E4-0063B9361035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC62EC1-F440-4ABE-9418-9E244187B14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC62EC1-F440-4ABE-9418-9E244187B14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC62EC1-F440-4ABE-9418-9E244187B14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC62EC1-F440-4ABE-9418-9E244187B14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A30B3E-C95B-46BA-8286-984D83702DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A30B3E-C95B-46BA-8286-984D83702DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A30B3E-C95B-46BA-8286-984D83702DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A30B3E-C95B-46BA-8286-984D83702DBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
