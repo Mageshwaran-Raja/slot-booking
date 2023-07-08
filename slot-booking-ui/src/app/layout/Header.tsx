@@ -1,4 +1,4 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import './Header.css'
 export default function Header() {
     const midLinks = [
@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <>
             <div className="nav-bar">
-                <img className='logo' src='/images/Kanini-Workspace.svg' />
+                <img className='logo' alt='kaninilogo' src='/images/Kanini-Workspace.svg' />
                 <ul className='nav-bar-items'>
                     {midLinks.map(({ title, path }) => (
                         <li className='nav-bar-item' onClick={() => navigate(path)} key={path}>
@@ -21,7 +21,7 @@ export default function Header() {
                     ))}
                 </ul>
                 <div className='profile'>
-                    <img id='notification' src='images/Notification-Bell.svg' />
+                    <img id='notification' alt='notification-bell' src='images/Notification-Bell.svg' />
                     <i className="fa-solid fa-user"></i>
                     <span id="profile-name">Patrick Bateman</span>
                 </div>
