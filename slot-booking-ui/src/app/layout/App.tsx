@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Header />
-    <div style={{padding: `0px 5.20833%`}}>
+    <div style={{padding: `1.5625% 5.20833%`}}>
       <Outlet />
     </div>
     </>
