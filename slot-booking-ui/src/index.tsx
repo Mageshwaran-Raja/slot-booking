@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import { Router } from './app/routes/Routes';
+import 'semantic-ui-css/semantic.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

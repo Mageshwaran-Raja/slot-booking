@@ -1,31 +1,15 @@
 import {useNavigate } from 'react-router-dom';
 import './Header.css'
 import { useEffect, useState } from 'react';
+import { getScalingFactor } from '../util/util';
 export default function Header() {
 
     // Responsive Style
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const scalingFactor = (screenWidth / 1920);
+    const [scalingFactor, setscalingFactor] = useState<number | null>(getScalingFactor(window.innerWidth));
 
     useEffect(() => {
-        const handleResize = () => {
-          setScreenWidth(window.innerWidth);
-        };
-    
-        window.addEventListener('resize', handleResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
-
-    const logoStyle = {
-        width: `206px * ${scalingFactor}`,
-        height: `27px * ${scalingFactor}`,
-        position: "absolute",
-        top: `30px * ${scalingFactor}`,
-        left: "5.20833%"
-    }
+        setscalingFactor(getScalingFactor(window.innerWidth));
+      }, [window.innerWidth]);    
 
     const midLinks = [
         { title: 'Home', path: '/' },
@@ -40,7 +24,8 @@ export default function Header() {
             <div 
                 style={{
                     height: `calc(84px * ${scalingFactor})`, 
-                    backgroundColor: "#EAE9EA"
+                    backgroundColor: "#fff",
+                    borderBottom: "0.8px solid #EAE9EA"
                 }} 
                 className="nav-bar"
             >
