@@ -1,4 +1,5 @@
 using SlotBooking.Persistence;
+using SlotBooking.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceService(builder.Configuration);
+
 
 var app = builder.Build();
 
