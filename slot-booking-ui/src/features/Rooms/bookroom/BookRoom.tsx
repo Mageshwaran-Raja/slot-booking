@@ -1,5 +1,7 @@
 export default function BookRoom() {
     return(
-        <h1>Book Room</h1>
+        <>
+        <span className="title" style={{fontSize: 'calc(.55em + 1vw)'}}>Book a Room</span>
+        </>
     )
 }
