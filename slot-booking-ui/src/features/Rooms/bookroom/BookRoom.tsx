@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { getScalingFactor } from "../../../app/util/util";
 import { Button, Dropdown, Icon } from 'semantic-ui-react';
 import '../bookroom/BookRoom.css';
-import { Card, Image } from 'semantic-ui-react';
+import agent from "../../../app/api/agent";
 
 export default function BookRoom() {
     const [scalingFactor, setscalingFactor] = useState<number | null>(getScalingFactor(window.innerWidth));
 
     useEffect(() => {
         setscalingFactor(getScalingFactor(window.innerWidth));
+        console.log(agent.Rooms.list());
     }, [window.innerWidth]);
 
     const [selectedOption, setSelectedOption] = useState('');
