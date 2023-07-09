@@ -17,7 +17,7 @@ namespace SlotBooking.API.Controllers
         }
 
         [HttpGet("GetAllRooms")]
-        public async Task<ActionResult<List<RoomDetailsDTO>>> Get(bool isLoggedInUser = false)
+        public async Task<ActionResult<List<RoomDetailsDTO>>> Get()
         {
             var rooms = await _mediator.Send(new GetAllRoomsQuery());
             return Ok(rooms);
