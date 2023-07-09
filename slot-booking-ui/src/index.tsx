@@ -5,13 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import { Router } from './app/routes/Routes';
 import 'semantic-ui-css/semantic.min.css';
+import { Provider } from 'react-redux';
+import { store } from './app/store/configureStore';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={Router} />
+    <Provider store={store}>
+      <RouterProvider router={Router} />
+    </Provider>
   </React.StrictMode>
 );
 
