@@ -2,17 +2,24 @@ import { useEffect, useState } from "react";
 import { getScalingFactor } from "../../../app/util/util";
 import { Button, Dropdown, Icon } from 'semantic-ui-react';
 import '../bookroom/BookRoom.css';
-import agent from "../../../app/api/agent";
+import { useAppDispatch, useAppSelector } from "../../../app/store/configureStore";
+import { fetchRoomsAsync, roomSelector } from "./bookRoomSlice";
 
 export default function BookRoom() {
+    const rooms = useAppSelector(roomSelector.selectAll)
+    const { roomDetailssLoaded, status } = useAppSelector(state => state.rooms);
+    const dispatch = useAppDispatch();
     const [scalingFactor, setscalingFactor] = useState<number | null>(getScalingFactor(window.innerWidth));
-
+    
     useEffect(() => {
         setscalingFactor(getScalingFactor(window.innerWidth));
-        console.log(agent.Rooms.list());
-    }, [window.innerWidth]);
+    }, [window.innerWidth])
 
-    const [selectedOption, setSelectedOption] = useState('');
+    useEffect(() => {
+        if (!roomDetailssLoaded) dispatch(fetchRoomsAsync());
+    }, [roomDetailssLoaded, dispatch]);
+
+    console.log(rooms, status)
 
     const navStyles = {
         width: `calc(340px * ${scalingFactor})`,
@@ -33,8 +40,6 @@ export default function BookRoom() {
         { key: 2, text: 'Choice 2', value: 2 },
         { key: 3, text: 'Choice 3', value: 3 },
       ]
-
-      const src = '/images/wireframe/white-image.png'
 
 
 
